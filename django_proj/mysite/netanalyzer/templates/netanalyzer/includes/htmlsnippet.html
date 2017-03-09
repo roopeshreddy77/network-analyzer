@@ -1,0 +1,9 @@
+{% block content %}
+<p> This tool is meant for parsing pcap files and find out IP addresses </p>
+<p> Using these IP addresses, we can find out their geographical locations!! </p>
+<p> Go ahead, and upload a .pcap file! </p>
+<form action="result.html">
+  <input type="file" name="file_upload" accept=".pcap">
+  <input type="submit">
+</form>
+{% endblock %}

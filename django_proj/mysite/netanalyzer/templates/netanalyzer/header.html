@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Network Analyzer</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'netanalyzer/css/bootstrap.min.css' %}" type = "text/css"/>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+	</style>
+</head>
+
+<body class="body" style="background-color:#f6f6f6">
+	<div class="container-fluid" style="min-height:95%; ">
+		<div class="row">
+			  <div class="col-sm-2">
+				  <br>
+				  <center>
+					<img src="{% static 'netanalyzer/img/spartan.gif' %}" class="responsive-img" style='max-height:200px;' alt="face">
+				  </center>
+			  </div>
+			  <div class="col-sm-10">
+				  <br>
+				  <center>
+				  <h1>CMPE 209: NETWORK SECURITY</h1>
+			          <h3>TEAM 01</h3>
+				  <h2>Network Traffic Analyzer</h2>
+               			  <h3>Welcome to the Network Analyzer Application!</h3><br>
+				  <h3>Go ahead and upload a .pcap file to view the IP addresses and their geographical locations!</h3><br>
+				  <h4><form action="/search/" method="get">
+                                  <input type="file" name="file_upload" accept=".pcap"><br>
+                                  <input type="submit">
+                                  </form> </h4>
+				  </center>
+			  </div>
+		</div><hr>
+
+		<div class="row">
+		  <div class="col-sm-3">
+		  <br>
+
+		  <br>
+		   <!-- Great, til you resize. -->
+			 <!--well bs-sidebar affix-->
+		  </div> <!--col-sm-2-->
+		  <div class="col-sm-8">
+		  
+			<div class='container-fluid'>
+			<br><br>
+			   {% block content %}
+			   {% endblock %}	
+			</div>
+		  </div>
+		</div> 
+	</div>
+	<footer>
+	
+	</footer>	
+	
+</body>
+
+</html>
